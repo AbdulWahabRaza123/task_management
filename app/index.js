@@ -12,6 +12,9 @@ app.use(express.json());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
+app.get("/", (req, res) => {
+  return res.send("Hello Task Mangement");
+});
 //importing routes
 const userRoutes = require("./user/user.routes");
 const taskRoutes = require("./task/task.routes");
